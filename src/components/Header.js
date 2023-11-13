@@ -6,6 +6,7 @@ export const Header = () => {
       <a href="https://google.com" alt="logo" className="logo">
         Logo
       </a>
+      <input id="search-bar" type="text" placeholder="Search" />
     </header>
   );
 };
