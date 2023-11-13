@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <footer>
       <div className="footer-section-1">
-        <a className="logo">Logo</a>
+        <a href="https://google.com" alt="logo" className="logo">WeatherWizard</a>
         <div className="footer-links">
           <a href="#">About Us</a>
           <a href="#">Contact Us</a>
