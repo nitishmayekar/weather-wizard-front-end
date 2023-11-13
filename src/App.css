@@ -6,11 +6,14 @@
   align-items: center;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgb(9, 9, 22);
+  color: white;
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
+  color: white;
 }
 
 input {
@@ -55,4 +58,16 @@ footer {
   justify-content: center;
   gap: 15px;
   font-size: 24px;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin: 16px;
+}
+
+.card-title {
+  font-size: 24px;
+  margin: 10px;
 }
