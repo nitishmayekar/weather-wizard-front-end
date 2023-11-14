@@ -1,0 +1,42 @@
+
+
+.widget {
+    padding: 8px;
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border: solid rgb(67, 4, 4) 1px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0px #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.value p {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+}
+
+.value {
+    font-size: 18px;
+    text-align: right;
+
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+
+.widget-wrapper {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+

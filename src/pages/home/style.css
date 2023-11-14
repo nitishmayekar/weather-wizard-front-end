@@ -11,6 +11,10 @@
     align-items: end;
 }
 
+.current-forecast .icon {
+    font-size: 50px;
+}
+
 .current-forecast .weather {
     font-size: 30px;
     margin: 0;
@@ -21,6 +25,43 @@
     margin: 0;
 }
 
-.current-city .date {
+.current-city .time, .date {
     margin: 0;
+}
+
+.hourly-forecast {
+    display: flex;
+    justify-content: space-around;
+    /* overflow-x: scroll; */
+    margin: 20px;
+}
+
+.hourly-forecast .hour {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px;
+    /* border-right: 1px solid #ddd; */
+}
+
+.hourly-forecast .vertical-line {
+    width: 1px;
+    border-left: 1px solid #0b0b0b;
+    height: auto;
+}
+
+.hourly-forecast .vertical-line:last-child {
+    border-left: none;
+}
+
+.hourly-forecast .hour:last-child {
+    border-right: none;
+}
+
+.hourly-forecast .hour .icon {
+    font-size: 30px;
+}
+
+.hourly-forecast .temperature {
+    width: max-content;
 }

@@ -6,7 +6,7 @@ export const LocationContext = createContext();
 export const LocationProvider = (props) => {
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [weatherData, setWeatherData] = useState(null);
-
+  const [threeHrForecast, set3hrForecast] = useState(null);
 
   useEffect(() => {
     const fetchWeatherData = async () => {
@@ -16,8 +16,17 @@ export const LocationProvider = (props) => {
       setWeatherData(res.data);
     };
 
+    const fetch3hrForecast = async () => {
+      const res = await api.get(
+        `/3h/${selectedLocation.lat}/${selectedLocation.lon}`
+      );
+      console.log(res.data);
+      set3hrForecast(res.data);
+    };
+
     if (selectedLocation) {
       fetchWeatherData();
+      fetch3hrForecast();
     }
   }, [selectedLocation]);
 
@@ -26,8 +35,9 @@ export const LocationProvider = (props) => {
       selectedLocation,
       setSelectedLocation,
       weatherData,
+      threeHrForecast,
     }),
-    [selectedLocation, setSelectedLocation, weatherData]
+    [selectedLocation, setSelectedLocation, weatherData, threeHrForecast]
   );
 
   return (
