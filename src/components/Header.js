@@ -1,4 +1,5 @@
 import React from "react";
+import { LocationSearch } from "./LocationSearch/LocationSearch";
 
 export const Header = () => {
   return (
@@ -6,7 +7,7 @@ export const Header = () => {
       <a href="https://google.com" alt="logo" className="logo">
         WeatherWizard
       </a>
-      <input id="search-bar" type="text" placeholder="Search" />
+      <LocationSearch />
     </header>
   );
 };
