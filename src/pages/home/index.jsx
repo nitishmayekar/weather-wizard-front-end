@@ -3,6 +3,7 @@ import "./style.css";
 import { LocationContext } from "../../context/LocationContext";
 import { timeConverter } from "../../utils/time-converter";
 import { ForecastDetails } from "../../components/ForecastDetails/ForecastDetails";
+import { PlaceRecommendations } from "../../components/PleaceRecommendation";
 
 export const Home = () => {
   const { selectedLocation, weatherData, threeHrForecast } =
@@ -73,6 +74,9 @@ export const Home = () => {
 
       {/* Selected 3hr Forecast */}
       {selected3hrForecast && <ForecastDetails details={selected3hrForecast} />}
+
+      {/* Recommended Places */}
+      <PlaceRecommendations />
     </main>
   );
 };

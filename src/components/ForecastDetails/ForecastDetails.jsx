@@ -4,7 +4,6 @@ import {
   BsDropletHalf,
   BsThermometerHalf,
 } from "react-icons/bs";
-import { timeConverter } from "../../utils/time-converter";
 import "./style.css";
 
 export const ForecastDetails = ({ details }) => {
