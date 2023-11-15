@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./style.css";
 import { LocationContext } from "../../context/LocationContext";
 import { timeConverter } from "../../utils/time-converter";
@@ -10,6 +10,12 @@ export const Home = () => {
     useContext(LocationContext);
 
   const [selected3hrForecast, setSelected3hrForecast] = useState(null);
+
+  useEffect(() => {
+    if (threeHrForecast && threeHrForecast.length > 0) {
+      setSelected3hrForecast(threeHrForecast.list[0]);
+    }
+  }, [threeHrForecast]);
 
   if (!selectedLocation || !weatherData || !threeHrForecast) {
     return (
@@ -55,7 +61,11 @@ export const Home = () => {
               <>
                 <div
                   key={forecast.dt}
-                  className="hour"
+                  className={`hour ${
+                    selected3hrForecast?.dt === forecast.dt
+                      ? "selected-hour"
+                      : ""
+                  }`}
                   onClick={() => setSelected3hrForecast(forecast)}
                 >
                   <h4 className="time">{timeConverter(forecast.dt_txt)}</h4>
@@ -65,7 +75,7 @@ export const Home = () => {
                   />
                   <p className="temperature">{forecast.main.temp} &deg;C</p>
                 </div>
-                <div className="vertical-line"></div>
+                {/* <div className="vertical-line"></div> */}
               </>
             );
           })}

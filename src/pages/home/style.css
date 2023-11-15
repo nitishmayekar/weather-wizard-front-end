@@ -1,3 +1,5 @@
+
+
 .hero-section {
     /* background-color: red; */
     display: flex;
@@ -8,7 +10,7 @@
 .current-forecast {
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
 }
 
 .current-forecast .icon {
@@ -31,8 +33,9 @@
 
 .hourly-forecast {
     display: flex;
+    gap: 20px;
     justify-content: space-around;
-    /* overflow-x: scroll; */
+    overflow-x: scroll;
     margin: 20px;
 }
 
@@ -41,7 +44,20 @@
     flex-direction: column;
     align-items: center;
     padding: 18px;
-    /* border-right: 1px solid #ddd; */
+    flex-grow: 1;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.hourly-forecast .hour:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+}
+
+.hourly-forecast .selected-hour  {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    /* border: 5px solid black; */
 }
 
 .hourly-forecast .vertical-line {
@@ -54,9 +70,6 @@
     border-left: none;
 }
 
-.hourly-forecast .hour:last-child {
-    border-right: none;
-}
 
 .hourly-forecast .hour .icon {
     font-size: 30px;

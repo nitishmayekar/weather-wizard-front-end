@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { LocationContext } from "../../context/LocationContext";
 import { api } from "../../utils/api";
+import "./style.css";
 
 const getPhotoUrl = (photo, height, width) =>
   `https://places.googleapis.com/v1/${photo}/media?key=${
@@ -29,15 +30,15 @@ export const PlaceRecommendations = () => {
       <div className="recommended-places">
         {places.map((each) => (
           <div className="place" key={each.id}>
-            <h3 className="name">{each.displayName.text}</h3>
-            {each.photos.slice(0, 2).map((photo) => (
+            {each.photos.slice(0, 1).map((photo) => (
               <img
+                className="photo"
+                key={photo.id}
                 src={getPhotoUrl(photo.name, photo.heightPx, photo.widthPx)}
                 alt={photo.caption}
-                height={200}
               />
             ))}
-            {/* <p className="description">Description</p> */}
+            <h3 className="name">{each.displayName.text}</h3>
           </div>
         ))}
       </div>

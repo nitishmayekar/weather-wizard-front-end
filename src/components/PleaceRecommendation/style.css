@@ -1,0 +1,44 @@
+
+
+.recommended-places {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    position: relative;
+    overflow-x: scroll;
+}
+
+.place {
+    /* max-height: 500px; */
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.place:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.place .photo {
+    border-radius: 10px 10px 0 0 ;
+    width: 100%;
+    min-width: 120px;
+    height: 200px;
+}
+
+@media (max-width: 600px) {
+    .place .photo {
+        height: 180px;
+        width: auto;
+        max-width: 180px;
+    }
+}
+
+.place .name {
+    font-size: 15px;
+    text-align: center;
+    /* flex-grow: 1; */
+}
