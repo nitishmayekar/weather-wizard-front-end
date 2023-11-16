@@ -1,12 +1,18 @@
 import React, { useState, createContext, useMemo, useEffect } from "react";
 import { api } from "../utils/api";
 
-export const LocationContext = createContext();
+export const LocationContext = createContext(null);
 
 export const LocationProvider = (props) => {
-  const [selectedLocation, setSelectedLocation] = useState(null);
+  const [selectedLocation, setSelectedLocation] = useState({
+    name: "Toronto",
+    lat: 43.6534817,
+    lon: -79.3839347,
+    country: "CA",
+    state: "Ontario",
+  });
   const [weatherData, setWeatherData] = useState(null);
-  const [threeHrForecast, set3hrForecast] = useState(null);
+  const [threeHrForecast, setThreeHrForecast] = useState(null);
 
   useEffect(() => {
     const fetchWeatherData = async () => {
@@ -20,8 +26,7 @@ export const LocationProvider = (props) => {
       const res = await api.get(
         `/3h/${selectedLocation.lat}/${selectedLocation.lon}`
       );
-      console.log(res.data);
-      set3hrForecast(res.data);
+      setThreeHrForecast(res.data);
     };
 
     if (selectedLocation) {

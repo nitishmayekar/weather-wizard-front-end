@@ -8,6 +8,11 @@ export const LocationSearch = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
+  const handleLocationSearch = async () => {
+    const res = await api.get(`/location/${searchTerm}`);
+    setSearchResults(res.data);
+  };
+
   const handleSelectLocation = (clickedLocation) => {
     setSelectedLocation(clickedLocation);
     setSearchResults([]);
@@ -15,11 +20,6 @@ export const LocationSearch = () => {
   };
 
   useEffect(() => {
-    const handleLocationSearch = async () => {
-      const res = await api.get(`/location/${searchTerm}`);
-      setSearchResults(res.data);
-    };
-
     if (searchTerm.length > 2) {
       handleLocationSearch();
     }

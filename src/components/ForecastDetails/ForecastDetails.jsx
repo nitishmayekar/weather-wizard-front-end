@@ -1,15 +1,11 @@
 import React from "react";
-import {
-  BsWind,
-  BsDropletHalf,
-  BsThermometerHalf,
-} from "react-icons/bs";
+import { BsWind, BsDropletHalf, BsThermometerHalf } from "react-icons/bs";
 import "./style.css";
 
 export const ForecastDetails = ({ details }) => {
   return (
     <div className="card">
-      <div className="widget-wrapper">
+            <div className="widget-wrapper">
         <div className="widget">
           <h1 className="title">
             <img
@@ -19,7 +15,7 @@ export const ForecastDetails = ({ details }) => {
           </h1>
           <p className="value">{details.weather[0].description}</p>
         </div>
-        <div className="widget">
+                <div className="widget">
           <h1 className="title">
             <BsThermometerHalf />
           </h1>
@@ -43,6 +39,6 @@ export const ForecastDetails = ({ details }) => {
           <p className="value">{details.main.humidity}%</p>
         </div>
       </div>
-    </div>
+          </div>
   );
 };

@@ -1,14 +1,16 @@
-import React from 'react'
+import React from "react";
 import { BsFacebook, BsTwitter, BsInstagram, BsYoutube } from "react-icons/bs";
+import { Link } from "react-router-dom";
+import { Logo } from "./Logo";
 
 export const Footer = () => {
   return (
     <footer>
       <div className="footer-section-1">
-        <a href="https://google.com" alt="logo" className="logo">WeatherWizard</a>
+        <Logo />
         <div className="footer-links">
-          <a href="#">About Us</a>
-          <a href="#">Contact Us</a>
+          <Link to="/about-us">About Us</Link>
+          <Link to="/contact-us">Contact Us</Link>
         </div>
         <div className="subscribe-section">
           <label htmlFor="subscribe-email">Subscribe to our newsletter</label>
@@ -23,5 +25,5 @@ export const Footer = () => {
       </div>
       <p>&copy; All Rights Reserved</p>
     </footer>
-  )
-}
+  );
+};
