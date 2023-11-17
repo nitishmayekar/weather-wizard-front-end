@@ -28,7 +28,7 @@ export const Home = () => {
   }
 
   return (
-    <main>
+    <main className="full-screen-wrapper">
       {/* Current Forecast */}
       <div className="card hero-section">
         <div className="current-city">

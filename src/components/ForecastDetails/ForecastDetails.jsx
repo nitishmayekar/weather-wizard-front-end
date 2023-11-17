@@ -5,7 +5,8 @@ import "./style.css";
 export const ForecastDetails = ({ details }) => {
   return (
     <div className="card">
-            <div className="widget-wrapper">
+      <h2 className="card-title">Selected 3-Hour Forecast</h2>
+      <div className="widget-wrapper">
         <div className="widget">
           <h1 className="title">
             <img

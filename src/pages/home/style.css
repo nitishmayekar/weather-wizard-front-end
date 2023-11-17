@@ -1,80 +1,95 @@
 
 
 .hero-section {
-    /* background-color: red; */
-    display: flex;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
+  padding: 25px;
+}
+
+/* mobile */
+@media (max-width: 600px) {
+  .hero-section {
     justify-content: space-between;
-    padding: 25px;
+  }
 }
 
 .current-forecast {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .current-forecast .icon {
-    font-size: 50px;
+  font-size: 50px;
 }
 
 .current-forecast .weather {
-    font-size: 30px;
-    margin: 0;
+  font-size: 30px;
+  margin: 0;
 }
 
 .current-forecast .temperature {
-    font-size: 30px;
-    margin: 0;
+  font-size: 30px;
+  margin: 0;
 }
 
 .current-city .time, .date {
-    margin: 0;
+  margin: 0;
 }
 
 .hourly-forecast {
-    display: flex;
-    gap: 20px;
-    justify-content: space-around;
-    overflow-x: scroll;
-    margin: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  overflow-x: scroll;
+  margin: 20px;
 }
 
 .hourly-forecast .hour {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 18px;
-    flex-grow: 1;
-    border: 1px solid black;
-    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px;
+  flex-grow: 1;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 120px;
+  max-width: 120px;
 }
 
 .hourly-forecast .hour:hover {
-    cursor: pointer;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 
 }
 
 .hourly-forecast .selected-hour  {
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    /* border: 5px solid black; */
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  /* border: 5px solid black; */
 }
 
 .hourly-forecast .vertical-line {
-    width: 1px;
-    border-left: 1px solid #0b0b0b;
-    height: auto;
+  width: 1px;
+  border-left: 1px solid #0b0b0b;
+  height: auto;
 }
 
 .hourly-forecast .vertical-line:last-child {
-    border-left: none;
+  border-left: none;
 }
 
 
 .hourly-forecast .hour .icon {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .hourly-forecast .temperature {
-    width: max-content;
+  width: max-content;
+  margin: 0;
+}
+
+.hourly-forecast .time {
+  margin: 0;
 }
