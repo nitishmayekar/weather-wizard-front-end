@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+### Project Proposal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### 1.1 Description
 
-## Available Scripts
+Weather Wizard is a one-stop solution to get real-time weather information for any
+location worldwide. Users can view current conditions, forecasts, and weather trends
+using simple and intuitive visualizations.
 
-In the project directory, you can run:
+#### 1.2 Problem
 
-### `npm start`
+People often find themselves switching between different apps and websites to get
+comprehensive weather details. There's a need for a consolidated platform that provides
+all relevant information in a user-friendly manner.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### 1.3 User Profile
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Travelers, event planners, farmers, or anyone needing accurate weather information.
+Users can search for a location, view current conditions, and weekly forecasts.
 
-### `npm test`
+#### 2. Client-side implementation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### 2.1 Site Map
 
-### `npm run build`
+- Home Page (http://localhost:3000/)
+- About Page (http://localhost:3000/about-us)
+- Contact Page (http://localhost:3000/contact-us)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### 3. Server-side implementation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### 3.1 End Points
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `GET /location/:searchTerm`
+  - Returns the coordinates of the place.
+- `GET /weather/:lat/:lon`
+  - Returns the current weather of the place using the coordinates.
+- `GET /3h/:lat/:lon`
+  - Returns the hourly weather of the place using the coordinates.
+- `GET /places/:lat/:lon`
+  - Returns the popular attractions of the place using the coordinates.
 
-### `npm run eject`
+#### 3.2 External API
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- [OpenWeatherMap](https://openweathermap.org/api)
+  - [Current Weather Data](https://openweathermap.org/current) - for current weather
+  - [5 day / 3 hour Forecast](https://openweathermap.org/forecast5) - for hourly weather
+  - [Geocoding API](https://openweathermap.org/api/geocoding-api) - for getting the coordinates of the place
+- [Google Places API](https://developers.google.com/maps/documentation/places/web-service/overview) - for getting the popular attractions of the place and their photos
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Tech-stack Used
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- FrontEnd:
+  - React
+  - JavaScript
+  - CSS
+  - Libraries: Axios, react-router-dom, react-icons
+- BackEnd:
+  - NodeJS
+  - JavaScript
+  - ExpressJS
+  - Libraries: Axios, cors, dotenv, nodemon
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Features and/or usage instruction
 
-## Learn More
+- User can search for any place using the search bar and get the current weather of that place.
+- User can also see the hourly weather of that place.
+- User can click on one of the hourly weather to see more details about that hour.
+- User can also see the popular attractions of that place.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### How to start the project
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Clone the repo
+- Go to the /front-end folder and run `npm install` and then `npm start` to start the front-end react server on http://localhost:3000
+- Go to the /server folder and run `npm install` and then `npm run dev` to start the back-end server on http://localhost:5000
+- you'll need the following environment variables to run the project.
+  - Front-end:
+  ```
+  REACT_APP_GOOGLE_API_KEY=xxxx
+  ```
+  - Back-end:
+  ```
+  PORT=5000
+  OPEN_WEATHER_API_KEY=xxxx
+  GOOGLE_API_KEY=xxxx
+  ```
 
-### Code Splitting
+### API references
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [OpenWeatherMap](https://openweathermap.org/api)
+  - [Current Weather Data](https://openweathermap.org/current) - for current weather
+  - [5 day / 3 hour Forecast](https://openweathermap.org/forecast5) - for hourly weather
+  - [Geocoding API](https://openweathermap.org/api/geocoding-api) - for getting the coordinates of the place
+- [Google Places API](https://developers.google.com/maps/documentation/places/web-service/overview) - for getting the popular attractions of the place and their photos
 
-### Analyzing the Bundle Size
+### Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Home Page](./screenshots/home.png)
+![Search Results](./screenshots/search-results.png)
+![Hourly Weather](./screenshots/hourly-weather.png)
+![Hourly Weather Details](./screenshots/hourly-weather-details.png)
+![Popular Attractions](./screenshots/popular-attractions.png)
 
-### Making a Progressive Web App
+### Lessons learned & next steps
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Learned how to use the Google Places API.
+- Learned how to use the OpenWeatherMap API.
+- Learned how to use the react-router-dom library.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Next Steps
+  - Improve the UI.
+  - Add Dark Mode.
+  - Add more features like 7 day forecast, etc.

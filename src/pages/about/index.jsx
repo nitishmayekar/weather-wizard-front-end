@@ -16,11 +16,6 @@ export const About = () => {
             your area.
           </p>
           <p>
-            This app was created as part of the final project for the{" "}
-            <a href="https://www.altcademy.com/">AltCademy</a> Full Stack Web
-            Development course.
-          </p>
-          <p>
             The app was built using React, Node.js, Express, and the OpenWeather
             API.
           </p>
