@@ -93,11 +93,15 @@ Users can search for a location, view current conditions, and weekly forecasts.
 
 ### Screenshots
 
-![Home Page](./screenshots/home.png)
+![Home Page](./screenshots/home1.png)
+![Home Page](./screenshots/home2.png)
+![Home Page](./screenshots/home3.png)
 ![Search Results](./screenshots/search-results.png)
 ![Hourly Weather](./screenshots/hourly-weather.png)
 ![Hourly Weather Details](./screenshots/hourly-weather-details.png)
 ![Popular Attractions](./screenshots/popular-attractions.png)
+![Popular Attractions](./screenshots/about-page.png)
+![Popular Attractions](./screenshots/contact-us.png)
 
 ### Lessons learned & next steps
 
