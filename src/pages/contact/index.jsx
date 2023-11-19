@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import image from "../../assets/contact-us.png";
 
-// contact us form with name subject and message with submit button
+
 export const Contact = () => {
   return (
     <div className="full-screen-wrapper">

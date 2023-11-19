@@ -1,7 +1,7 @@
 
 
 .hero-section {
-  /* background-color: red; */
+
   display: flex;
   justify-content: space-around;
   padding: 25px;
@@ -67,7 +67,6 @@
 
 .hourly-forecast .selected-hour  {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-  /* border: 5px solid black; */
 }
 
 .hourly-forecast .vertical-line {

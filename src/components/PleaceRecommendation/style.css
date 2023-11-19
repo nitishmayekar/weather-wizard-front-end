@@ -12,12 +12,10 @@
 }
 
 .place {
-  /* max-height: 500px; */
   border: 1px solid black;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  /* height: auto; */
   width: 200px;
   max-width: 200px;
 }
@@ -29,7 +27,6 @@
 
 .place .photo {
   border-radius: 10px 10px 0 0;
-  /* width: 100%; */
   min-width: 200px;
   height: 200px;
 }
@@ -45,5 +42,4 @@
 .place .name {
   font-size: 15px;
   text-align: center;
-  /* flex-grow: 1; */
 }

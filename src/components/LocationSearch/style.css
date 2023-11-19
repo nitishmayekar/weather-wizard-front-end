@@ -2,7 +2,6 @@
 
 .location-search {
   position: relative;
-  /* flex-grow: 1; */
 }
 
 .location-results {
@@ -32,6 +31,5 @@
 
 .search-result:hover {
   background-color: #ccc;
-  /* padding: 5px; */
   cursor: pointer;
 }

@@ -5,7 +5,6 @@
 
 .about-us-image {
   width: 50%;
-  /* height: 60%; */
   object-fit: cover;
   object-position: center;
 }

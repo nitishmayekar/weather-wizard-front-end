@@ -52,7 +52,7 @@ export const Home = () => {
         </div>
       </div>
 
-      {/* Hourly Forecast */}
+      {/*3 Hourly Forecast */}
       <div className="card">
         <h2 className="card-title">3-Hour Forecast</h2>
         <div className="hourly-forecast">
