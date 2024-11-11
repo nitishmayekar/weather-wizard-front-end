@@ -41,10 +41,10 @@ Users can search for a location, view current conditions, and weekly forecasts.
 #### 3.2 External API
 
 - [OpenWeatherMap](https://openweathermap.org/api)
-  - [Current Weather Data](https://openweathermap.org/current) - for current weather
-  - [5 day / 3 hour Forecast](https://openweathermap.org/forecast5) - for hourly weather
-  - [Geocoding API](https://openweathermap.org/api/geocoding-api) - for getting the coordinates of the place
-- [Google Places API](https://developers.google.com/maps/documentation/places/web-service/overview) - for getting the popular attractions of the place and their photos
+  - [Current Weather Data](https://openweathermap.org/current) - for current weather.
+  - [5 day / 3 hour Forecast](https://openweathermap.org/forecast5) - for hourly weather.
+  - [Geocoding API](https://openweathermap.org/api/geocoding-api) - for getting the coordinates of the place.
+- [Google Places API](https://developers.google.com/maps/documentation/places/web-service/overview) - for getting the popular attractions of the place and their photos.
 
 ### Tech-stack Used
 
