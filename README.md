@@ -59,7 +59,7 @@ Users can search for a location, view current conditions, and weekly forecasts.
   - ExpressJS
   - Libraries: Axios, cors, dotenv, nodemon
 
-### Features and/or usage instruction
+#### Features and/or usage instruction
 
 - User can search for any place using the search bar and get the current weather of that place.
 - User can also see the hourly weather of that place.
