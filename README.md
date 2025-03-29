@@ -66,7 +66,7 @@ Users can search for a location, view current conditions, and weekly forecasts.
 - User can click on one of the hourly weather to see more details about that hour.
 - User can also see the popular attractions of that place.
 
-### How to start the project
+#### How to start the project
 
 - Clone the repo
 - Go to the /front-end folder and run `npm install` and then `npm start` to start the front-end react server on http://localhost:3000
